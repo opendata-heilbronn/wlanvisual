@@ -4,7 +4,7 @@ This project was started during an event at CodeforHN.
 
 https://www.meetup.com/de-DE/codeforhn/events/248306628/
 
-It uses a NodeMCU (ESP-2866) for WLAN connectivity and an NeoPixel FeatherWing - 4x8 RGB LED Module for visualisation. We also added a small I2C OLED Display for debugging
+It uses a NodeMCU (ESP-8266) for WLAN connectivity and an NeoPixel FeatherWing - 4x8 RGB LED Module for visualisation. We also added a small I2C OLED Display for debugging
 and additional information.
 
 ## Getting Started
@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need a running Arduino IDE with the ESP-2866 board enabled. You find a good
+You need a running Arduino IDE with the ESP-8266 board enabled. You find a good
 tutorial (in german language) at http://blog.opendatalab.de/codeforbuga/2016/07/02/arduino-ide-mit-nodemcu-esp8266
 
 The project uses the following libraries (installed via library manager):
@@ -32,14 +32,20 @@ with the Arduino IDE.
 
 ## Schematic
 
-TODO ;)
+TODO drawn schematic
 
-Here some text:
+Schematic in text form:
 ```
 D0 - Internal LED
+
 D1 - OLED I2C Data
 D2 - OLED I2C Clock
+
 D5 - NeoPixel Input
+
+D3 - Rotary Encoder Button (SW)
+D4 - Rotary Encoder Output A (DT)
+D6 - Rotary Encoder Output B (CLK)
 
 OLED might use 3V3! Look at your pinout and specs ;)
 NodeMCU is powered with its USB connector from 5V Power Bank
